@@ -5,11 +5,11 @@ public class Motor {
 	String tipo;
 	int registro;
 	
-	public void cambiarRegistro(int numeroRegistro) {
+	void cambiarRegistro(int numeroRegistro) {
 		registro = numeroRegistro;
 	}
 	
-	public void asignarTipo(String tipoMotor) {
+	void asignarTipo(String tipoMotor) {
 		if (tipoMotor != "electrico" | tipoMotor != "gasolina") {
 			tipo = tipoMotor;
 		}
