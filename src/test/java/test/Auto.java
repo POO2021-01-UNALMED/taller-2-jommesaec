@@ -20,15 +20,19 @@ public class Auto {
 	}
 	
 	String verificarIntegridad() {
-		boolean original = false;
-		for (int x = 0; x <= asientos.length; x++) {
+		boolean original = true;
+		for (int x = 0; x < asientos.length; x++) {
 			if (asientos[x] != null) {
-				if (asientos[x].registro == this.registro && this.registro == motor.registro) {
-					original = true;
-					
+				if (asientos[x].registro != registro) {
+					original = false;
 				}
 			}
 		}
+		
+		if (motor.registro != registro) {
+			original = false;
+		}
+		
 		if (original){
 			return "Auto original";
 		}
