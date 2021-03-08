@@ -15,13 +15,15 @@ public class Auto {
 	
 	String verificarIntegridad() {
 		String msg;
-		for (int x = 0; x <= asientos.length; ++x) {
-			if ((motor.registro != this.registro) || (motor.registro != asientos[x].registro) || this.registro != asientos[x].registro) {
-				msg = "Las piezas no son originales";
-				
-			}
-			else {
-				msg = "Auto original";
+		for (int x = 0; x <= asientos.length; x++) {
+			if (asientos[x] != null) {
+				if ((motor.registro != this.registro) || (motor.registro != asientos[x].registro) || this.registro != asientos[x].registro) {
+					msg = "Las piezas no son originales";
+					
+				}
+				else {
+					msg = "Auto original";
+				}
 			}
 		}
 		return msg;
