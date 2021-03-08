@@ -17,11 +17,14 @@ public class Auto {
 		for (int x = 0; x <= asientos.length; ++x) {
 			if ((motor.registro != this.registro) || (motor.registro != asientos[x].registro) || this.registro != asientos[x].registro) {
 				String msg = "Las piezas no son originales";
+				return msg;
 			}
 			else {
 				String msg = "Auto original";
+				return msg;
 			}
 		}
+		
 	}
 		
 }
